@@ -1,0 +1,500 @@
+<html lang="he">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Miriam+Libre|Secular+One" rel="stylesheet">
+		<meta name="google" value="notranslate">
+		<title>Nike - Register</title>
+		<script>
+			function Check(){
+                var Name = document.forms["formc"]["Sname"].value;
+				var Fname = document.forms["formc"]["Fname"].value;
+				var Country = document.forms["formc"]["Country"].value;
+				var City = document.forms["formc"]["City"].value;
+				var Mail = document.forms["formc"]["Mail"].value;
+				var Pass = document.forms["formc"]["Pass"].value;
+				var RePass = document.forms["formc"]["RePass"].value;
+				var Phone = document.forms["formc"]["Phone"].value;
+				var letters = /^[A-Za-z]+$/;
+				if(isNaN(Phone)){
+					document.getElementById("note").innerHTML = "במס' הטלפון רשמת אותיות!";
+					document.forms["formc"]["Phone"].style.border = "3px solid #ce0a00";
+					return false;
+				}
+				else{
+					document.forms["formc"]["Phone"].style.border = "";
+				}
+				if(!isNaN(Name) && Name < 2){
+					document.getElementById("note").innerHTML = "בשם הפרטי כתבת מספרים";
+					document.forms["formc"]["Sname"].style.border = "3px solid #ce0a00";
+					return false;
+				}
+				else{
+					document.forms["formc"]["Sname"].style.border = "";
+					document.getElementById("note").innerHTML = "";
+				}
+				if(!isNaN(Fname)){
+					document.getElementById("note").innerHTML = "בשם המשפחה כתבת מספרים!";
+					document.forms["formc"]["Fname"].style.border = "3px solid #ce0a00";
+					return false;
+				}
+				else{
+					document.forms["formc"]["Fname"].style.border = "";
+					document.getElementById("note").innerHTML = "";
+				}
+				if(!isNaN(City)){
+					document.getElementById("note").innerHTML = "בעיר כתבת מספרים!";
+					document.forms["formc"]["City"].style.border = "3px solid #ce0a00";
+					return false;
+				}
+				else{
+					document.forms["formc"]["City"].style.border = "";
+					document.getElementById("note").innerHTML = "";
+				}
+				if(Pass != RePass){
+					document.getElementById("note").innerHTML = "האימות לא זהה לסיסמא שהזנת!";
+					document.forms["formc"]["RePass"].style.border = "3px solid #ce0a00";
+					return false;
+				}
+				else{
+					document.forms["formc"]["RePass"].style.border = "";
+				}
+				var atpos = Mail.indexOf("@");
+				var dotpos = Mail.lastIndexOf(".");
+				var dotpos1 = dotpos + 1;
+				if (atpos<1 || dotpos<atpos+2 || dotpos+2>=Mail.length || dotpos1 == atpos) {
+					document.getElementById("note").innerHTML = "המייל שרשמת לא נכתב בצורה נכונה!";
+					document.forms["formc"]["Mail"].style.border = "3px solid #ce0a00";
+					return false;
+				}
+			}
+            function ShowPass() {
+                var a = document.getElementById("Pass").type;
+                if (a == "password") {
+                    document.getElementById("Pass").type = "text";
+					document.getElementById("RePass").type = "text";
+
+                }
+                else {
+                    document.getElementById("Pass").type = "password";
+					document.getElementById("RePass").type = "password";
+                }
+            }
+			function StarR(){
+				document.getElementById("s1").src = "Pic/starn.png";
+				document.getElementById("s2").src = "Pic/starn.png";
+				document.getElementById("s3").src = "Pic/starn.png";
+				document.getElementById("s4").src = "Pic/starn.png";
+				document.getElementById("s5").src = "Pic/starn.png";
+			}
+			function Star1(){
+				document.getElementById("s1").src = "Pic/stary.png";
+				document.getElementById("s2").src = "Pic/starn.png";
+				document.getElementById("s3").src = "Pic/starn.png";
+				document.getElementById("s4").src = "Pic/starn.png";
+				document.getElementById("s5").src = "Pic/starn.png";
+			}
+			function Star2(){
+				document.getElementById("s1").src = "Pic/stary.png";
+				document.getElementById("s2").src = "Pic/stary.png";
+				document.getElementById("s3").src = "Pic/starn.png";
+				document.getElementById("s4").src = "Pic/starn.png";
+				document.getElementById("s5").src = "Pic/starn.png";
+			}
+			function Star3(){
+				document.getElementById("s1").src = "Pic/stary.png";
+				document.getElementById("s2").src = "Pic/stary.png";
+				document.getElementById("s3").src = "Pic/stary.png";
+				document.getElementById("s4").src = "Pic/starn.png";
+				document.getElementById("s5").src = "Pic/starn.png";
+
+			}
+			function Star4(){
+				document.getElementById("s1").src = "Pic/stary.png";
+				document.getElementById("s2").src = "Pic/stary.png";
+				document.getElementById("s3").src = "Pic/stary.png";
+				document.getElementById("s4").src = "Pic/stary.png";
+				document.getElementById("s5").src = "Pic/starn.png";
+			}
+			function Star5(){
+				document.getElementById("s1").src = "Pic/stary.png";
+				document.getElementById("s2").src = "Pic/stary.png";
+				document.getElementById("s3").src = "Pic/stary.png";
+				document.getElementById("s4").src = "Pic/stary.png";
+				document.getElementById("s5").src = "Pic/stary.png";
+			}
+		</script>
+		<style>
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-image: url(Pic/Bg8.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+			#header1{
+				background-color: black;
+				height: 115px;
+				width: 100%;
+				position: sticky;
+				line-height: 100px;
+			}
+			#barlinks{
+				float: right;
+				display: inline-block;
+			}
+			.nav{
+				text-decoration: none;
+				color: white;
+				line-height: 115px;
+				font-family: 'Sedgwick Ave Display', cursive;
+				padding: 20px;
+				font-size: 25px;
+				padding-bottom: 38px;
+				padding-top: 38px;
+				transition-duration: 0.4s;
+			}
+			.nav:hover{
+				background-color:#333435;
+			}
+			#Nike1{
+				display: inline-block;
+				color: white;
+				font-family: 'Russo One', sans-serif;
+				font-size: 35px;
+				letter-spacing: 3px;
+				padding: 15px;
+				line-height: 50px;
+			}
+			#table1{
+				direction: rtl;
+			}
+			.NikeP{
+				font-family: 'Miriam Libre', sans-serif;
+				font-size: 17px;
+				color: white;
+			}
+			.NikeH{
+				font-family: 'Secular One', sans-serif;
+			}
+			.button {
+				background-color: black;
+				border: none;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				font-family: 'Miriam Libre', sans-serif;
+				cursor: pointer;
+				padding: 15px 15px 15px 15px;
+				font-size: 20px;
+				width: 100%;
+				margin-top: 3px;
+				transition-duration: 0.4s;
+				border-radius: 4px;
+			}
+			.Sbutton{
+				background-color: black;
+				border: none;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				font-family: 'Miriam Libre', sans-serif;
+				cursor: pointer;
+				padding: 8px;
+				font-size: 10px;
+				width: 50%;
+				margin-top: 3px;
+				transition-duration: 0.4s;
+				border-radius: 4px;
+			}
+			.inputs{
+				margin: 3px;
+				padding: 5px;
+				border-radius: 4px;
+				border: 2px solid;
+				box-sizing: border-box;
+				transition-duration: 0.4s;
+			}
+			.button:hover {
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.Sbutton:hover {
+				background-color:#8d96a3;				
+			}
+			#Nike{
+				font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+				font-weight:100;
+				background: rgba(0,0,0,0.3);
+				color: white;
+				padding: 42px;
+				margin: 32px;
+				font-size: 1.2rem;
+				border-radius: 20px;
+				margin-top: 100px;
+				width: 50%;
+			}
+			#Pn{
+				background-image: url(Pic/Bg2.jpg);
+				background-size: cover;
+
+			}
+			.note{
+				font-family: 'Miriam Libre', sans-serif;
+				font-size: 17px;
+				color: white;
+				text-align: center;
+				margin: 3px;
+				display: inline-block;
+			}
+			.nav1{
+				text-decoration: none;
+				line-height: 115px;
+				height: 25px;
+				width: 25px;
+				border-radius: 50%;
+				border-width: inhert;
+				margin: 3px;
+			}
+			.nav1:hover{
+				background-color: white;
+			}
+			.noteimg{
+				height: 25px;
+				width: 25px;
+				margin-right: 15px;
+				margin-top: 8px;
+			}
+            .eye{
+                height: 30px;
+                width: 30px;
+            }
+			.radio{
+				font-family: 'Miriam Libre', sans-serif;
+				font-size: 17px;
+				color: white;
+
+			}
+			.star{
+				height: 25px;
+				width: 25px;
+				transition-duration: 0.2s;
+			}
+			.N{
+				color: red;
+				font-size: 10px;
+				margin: 0px;
+				padding: -10px;
+			}
+			#Country{
+				width: 97%;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header1">
+			<h1 id="Nike1">Nike Official Website</h1>
+			<nav id="barlinks">
+				<a class="nav" href="index.html">Home page</a>
+				<a class="nav" href="Products.html">Products</a>
+				<a class="nav" href="Form.html">Register</a>
+				<a class="nav" href="About.html">About</a>
+				<a class="nav" href="List.html">List</a>
+				<a class="nav" href="Quiz.html">Quiz</a>
+			</nav>
+		</header>
+		<hr style="margin:0px;padding:0px;">
+		<center><div id="Nike">
+			<h1 dir="rtl" class="NikeH">הירשם למועדון הלקוחות של נייק!</h1>
+			<h2 dir="rtl" class="NikeH"></h2>
+			<form name="formc" onsubmit="return Check()" >
+				<table id="table1">
+					<tr>
+						<td>
+						</td>
+						<td >
+							<center><button class="Sbutton" type="reset" onclick="StarR()" >אפס נתונים</button><center>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="nikeP" >שם פרטי: </p>
+						</td>
+						<td>
+							<input class="inputs" name="Sname"  maxlength="10" required />
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="nikeP">שם משפחה:</p>
+						</td>
+						<td>
+							<input class="inputs" name="Fname"  minlength="2" maxlength="10" required />
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>					
+					<tr>
+						<td>
+							<p class="nikeP">מדינה:</p>
+						</td>
+						<td>
+							<select name="Country" size="1" class="inputs" id="Country">
+								<option value="">ישראל</option>
+								<option value="">ארצות הברית</option>
+								<option value="">קנדה</option>
+								<option value="">רוסיה</option>
+								<option value="">צרפת</option>
+								<option value="">איטליה</option>
+								<option value="">גרמניה</option>
+								<option value="">ספרד</option>
+								<option value="">ברזיל</option>
+								<option value="">ארגנטינה</option>
+								<option value="">פורטוגל</option>
+							</select>
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>										
+					<tr>
+						<td>
+							<p class="nikeP">עיר:</p>
+						</td>
+						<td>
+							<input class="inputs" name="City"  minlength="2" maxlength="10" required />
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="nikeP">מין(בחר):</p>
+						</td>
+						<td class="radio">
+							<center><input style="margin-left:10px;margin-right:10px;" type="radio" name="gender"  >זכר
+							<input style="margin-left:10px;margin-right:10px;" type="radio" name="gender">נקבה</center>
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="nikeP">כתובת מייל:</p>
+						</td>
+						<td>
+							<input class="inputs" name="Mail" dir="ltr" required />
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>					
+					<tr>
+						<td>
+							<p class="nikeP">סיסמא:</p>
+						</td>
+						<td>
+							<input class="inputs" maxlength="10" name="Pass" type="password" id="Pass" minlength="4" required />
+						</td>
+						<td>
+                            <a style="cursor:pointer;" onclick="ShowPass()"><img src="Pic/Eye4.png" class="eye"  /></a>
+						</td>
+						<td>
+
+						</td>
+					</tr>			
+					<tr>
+						<td>
+							<p class="nikeP">אמת סיסמא:</p>
+						</td>
+						<td>
+							<input class="inputs" maxlength="10" type="password" name="RePass" id="RePass" minlength="4" required />
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>					
+					<tr>
+						<td>
+							<p class="nikeP">מס' טלפון:</p>
+						</td>
+						<td>
+							<input class="inputs" name="Phone"  minlength="7" required />
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="nikeP">דרג אותנו:</p>
+						</td>
+						<td>
+							<center><img class="star" src="Pic/starn.png" onclick="Star1()" id="s1"/><img class="star" src="Pic/starn.png" onclick="Star2()"id="s2"/><img class="star" src="Pic/starn.png" onclick="Star3()" id="s3"/><img class="star" src="Pic/starn.png" onclick="Star4()" id="s4"/><img class="star" src="Pic/starn.png" onclick="Star5()" id="s5"/></center>
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4" id="warn" >
+							<p id="note" class="note"></p>
+						</td>
+
+					</tr>
+					<tr>
+						<td colspan="4">
+							<input type="submit" class="button" value="הירשם עכשיו!">
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="4">
+							<p class="nikeP" style="margin-top: 5px;font-size: 15px;">כפוף לתקנון</p>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div></center>
+		<hr>
+				<center>
+				<h1 class="NikeH" style="font-size:20px;color:white;">עקבו אחרינו גם ברשתות החברתיות</h1>
+				<a target="_blank" href="https://www.youtube.com/channel/UCUFgkRb0ZHc4Rpq15VRCICA"><img class="nav1" src="Pic/YT.png" /></a>
+				<a target="_blank" href="https://www.instagram.com/nike/"><img class="nav1" src="Pic/IN.png" /></a>
+				<a target="_blank" href="https://www.facebook.com/nike/"><img class="nav1" src="Pic/FB.png" /></a>
+				<a target="_blank" href="https://twitter.com/nike?lang=en"><img class="nav1" src="Pic/TW.png" /></a>
+				</center>
+	</body>
+</html>

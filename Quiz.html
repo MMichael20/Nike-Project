@@ -1,0 +1,342 @@
+<html lang="he">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Miriam+Libre|Secular+One" rel="stylesheet">
+		<meta name="google" value="notranslate">
+		<title>Nike - Register</title>
+		<script>
+			function Check(){
+				var c = 0;
+				if(document.getElementById("A1").checked == true){
+					c++;
+					document.getElementById("i1").src = "Gal/V.png";
+					document.getElementById("i1").style.visibility = "";
+				}
+				else{					
+					document.getElementById("i1").src = "Gal/X.png";
+					document.getElementById("i1").style.visibility = "";
+				}
+				if(document.getElementById("C2").checked == true){
+					c++;
+					document.getElementById("i2").src = "Gal/V.png";
+					document.getElementById("i2").style.visibility = "";
+				}
+				else{					
+					document.getElementById("i2").src = "Gal/X.png";
+					document.getElementById("i2").style.visibility = "";
+				}
+				if(document.getElementById("B3").checked == true){
+					c++;
+					document.getElementById("i3").src = "Gal/V.png";
+					document.getElementById("i3").style.visibility = "";
+				}
+				else{					
+					document.getElementById("i3").src = "Gal/X.png";
+					document.getElementById("i3").style.visibility = "";
+				}
+				if(document.getElementById("A4").checked == true){
+					c++;
+					document.getElementById("i4").src = "Gal/V.png";
+					document.getElementById("i4").style.visibility = "";
+				}
+				else{					
+					document.getElementById("i4").src = "Gal/X.png";
+					document.getElementById("i4").style.visibility = "";
+				}
+				alert("תשובות נכונות: " + c);
+			}
+		</script>
+		<style>
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-image: url(Pic/Bg8.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+			#header1{
+				background-color: black;
+				height: 115px;
+				width: 100%;
+				position: sticky;
+				line-height: 100px;
+			}
+			#barlinks{
+				float: right;
+				display: inline-block;
+			}
+			.nav{
+				text-decoration: none;
+				color: white;
+				line-height: 115px;
+				font-family: 'Sedgwick Ave Display', cursive;
+				padding: 20px;
+				font-size: 25px;
+				padding-bottom: 38px;
+				padding-top: 38px;
+				transition-duration: 0.4s;
+			}
+			.nav:hover{
+				background-color:#333435;
+			}
+			#Nike1{
+				display: inline-block;
+				color: white;
+				font-family: 'Russo One', sans-serif;
+				font-size: 35px;
+				letter-spacing: 3px;
+				padding: 15px;
+				line-height: 50px;
+			}
+			#Nike{
+				font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+				font-weight:100;
+				background: rgba(0,0,0,0.3);
+				color: white;
+				padding: 42px;
+				margin: 32px;
+				font-size: 1.2rem;
+				border-radius: 20px;
+				margin-top: 100px;
+				width: 50%;
+				direction: rtl;
+			}
+			.NikeP{
+				font-family: 'Miriam Libre', sans-serif;
+				font-size: 17px;
+				color: white;
+			}
+			.NikeH{
+				font-family: 'Secular One', sans-serif;
+			}
+			.nav1{
+				text-decoration: none;
+				line-height: 115px;
+				height: 25px;
+				width: 25px;
+				border-radius: 50%;
+				border-width: inhert;
+				margin: 3px;
+			}
+			.nav1:hover{
+				background-color: white;
+			}
+			.Que{
+				font-family: 'Secular One', sans-serif;
+				color: white;
+				transition-duration: 0.4s;
+			}
+			.button {
+				background-color: black;
+				border: none;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				font-family: 'Miriam Libre', sans-serif;
+				cursor: pointer;
+				padding: 15px 15px 15px 15px;
+				font-size: 20px;
+				width: 100%;
+				margin-top: 3px;
+				transition-duration: 0.4s;
+				border-radius: 4px;
+			}
+			.button:hover {
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header1">
+			<h1 id="Nike1">Nike Official Website</h1>
+			<nav id="barlinks">
+				<a class="nav" href="index.html">Home page</a>
+				<a class="nav" href="Products.html">Products</a>
+				<a class="nav" href="Form.html">Register</a>
+				<a class="nav" href="About.html">About</a>
+				<a class="nav" href="List.html">List</a>
+				<a class="nav" href="Quiz.html">Quiz</a>
+			</nav>
+		</header>
+		<hr style="margin:0px;padding:0px;">
+		<center><div id ="nike"><table id="quiz">
+			<tr >
+				<td colspan="3"><h1 class="Que">באיזו שנה נוצרה נייק?</h1></td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP" id="PA1"><input type="radio" name="Q1" id="A1" >1971</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP" id="PB1"><input type="radio" id="B1" name="Q1">1972</input></p>
+				</td>
+				<td>
+					<img src="Gal/X.png" style="visibility: hidden;" id="i1"/>
+				</td>
+				<td>					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP" id="PC1"><input type="radio" id="C1" name="Q1" >1642</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP" id="PD1"><input type="radio" id="D1" name="Q1" >2001</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr >
+				<td colspan="3"><h1 class="Que">מי המייסד של נייק?</h1></td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="A2" name="Q2" >ליאונל מסי</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="B2" name="Q2" >מארק ברגר</input></p>
+				</td>
+				<td>
+					<img src="Gal/X.png" style="visibility: hidden;" id="i2"/>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="C2" name="Q2">פיל נייט</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="D2" name="Q2">מארק פרקר</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr >
+				<td colspan="3"><h1 class="Que">באיזו שנה נייק החלה לשווק את מוצריה?</h1></td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="A3" name="Q3">1971</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="B3" name="Q3">1972</input></p>
+				</td>
+				<td>
+					<img src="Gal/X.png" style="visibility: hidden;" id="i3"/>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="C3" name="Q3">1642</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="D3" name="Q3">2001</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr >
+				<td colspan="3"><h1 class="Que">מה מייצרת חברת הנעליים נייק?</h1></td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="A4" name="Q4">מוצרי ספורט שונים</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="B4" name="Q4">אוכל מוכן וטרי</input></p>
+				</td>
+				<td>
+					<img src="Gal/X.png" style="visibility: hidden;" id="i4"/>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="C4" name="Q4">נעליים</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="NikeP"><input type="radio" id="D4" name="Q4">כובעים</input></p>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+						<td colspan="4">
+							<button onclick="Check()" class="button">בדוק תשובות</button>
+						</td>
+			</tr>
+		</table>
+		</div>
+		</center>
+		
+		<hr>
+				<center>
+				<h1 class="NikeH" style="font-size:20px;color:white;">עקבו אחרינו גם ברשתות החברתיות</h1>
+				<a target="_blank" href="https://www.youtube.com/channel/UCUFgkRb0ZHc4Rpq15VRCICA"><img class="nav1" src="Pic/YT.png" /></a>
+				<a target="_blank" href="https://www.instagram.com/nike/"><img class="nav1" src="Pic/IN.png" /></a>
+				<a target="_blank" href="https://www.facebook.com/nike/"><img class="nav1" src="Pic/FB.png" /></a>
+				<a target="_blank" href="https://twitter.com/nike?lang=en"><img class="nav1" src="Pic/TW.png" /></a>
+				</center>
+	</body>
+</html>
